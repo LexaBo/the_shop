@@ -1,9 +1,259 @@
 @import (less) 'node_modules/normalize.css/normalize.css';
 @import (less) './_media';
 
-// Код для примера
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
-    background: yellow;
+    background: white;
+}
+.wrapper{
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.header{
+    height: 87px;
+    &__logo{
+        position: absolute;
+        width: 103px;
+        height: 22px;
+        top: 35px;
+        left: 6.3%;
+
+
+    }
+    &__logo-oggetto{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 19px;
+        left: 49%;
+
+
+
+    }
+    &__number{
+        position: absolute;
+        font-size: 24px;
+        font-family: "Roboto";
+        color: rgb(204, 0, 0);
+        font-weight: bold;
+        line-height: 1.2;
+        text-align: right;
+        top: 35px;
+        right: 6.3%;
+
+
+    }
+}
+.header__point{
+    position: relative;
+    top: -5px;
+}
+.navigation {
+    position: relative;
+    background: #f2f2ed;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 212);
+    height: 53px;
+    &__menu {
+        list-style: none;
+        margin: 1.4% 0 0 6.3%;
+
+    }
+    &__link {
+        font-size: 16px;
+        font-family: "Roboto";
+        color: rgb(204, 0, 0);
+        text-decoration: underline;
+        text-align: left;
+        &_black{
+            color: black;
+        }
+    }
+
+    &__item {
+        float: left;
+        margin-right: 1%;
+    }
+}
+.search-form{
+    position: absolute;
+    right: 6.3%;
+    top: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 212);
+    background-color: rgb(255, 255, 255);
+    width: 253px;
+    height: 38px;
+
+    &__input{
+        position: absolute;
+        border: none;
+        outline: none;
+        width: 213px;
+        height: 36px;
+        left: 9px;
+        top: 1px;
+    }
+
+    &__image{
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: 9px;
+        top: 11px;
+        border: none;
+    }
+}
+.choice {
+    padding: 50px 0 1.4% 6.3%;
+    &__menu {
+        list-style: none;
+        margin-bottom: 1.4%;
+
+
+    }
+    &__link {
+        font-size: 16px;
+        font-family: "Roboto";
+        color: rgb(204, 0, 0);
+        text-decoration: underline;
+        text-align: left;
+        &_black {
+            color: black;
+        }
+    }
+
+    &__item {
+        float: left;
+        margin-right: 1%;
+    }
+}
+
+
+.product{
+    &__pics {
+        float: left;
+        margin-left: 6.3%;
+        margin-right: 4%;
+        width: 43.7%;
+        height: 43.7%;
+    }
+    &__pic{
+        width: 100%;
+    }
+    &__info{
+        float: right;
+        width: 39.7%;
+        margin-right: 6.3%;
+    }
+    &__title{
+        font-size: 36px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        text-align: left;
+    }
+    &__description{
+        margin-top: 1%;
+        font-size: 16px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+    &__price{
+        margin-top: 2%;
+        font-size: 36px;
+        font-family: "Roboto";
+        color: rgb(204, 0, 0);
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+.size {
+    width: 100%;
+    margin-top: 2.3%;
+    &__name {
+        font-size: 16px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+    &__item {
+        display: inline-block;
+        margin-top: 1.2%;
+        font-size: 36px;
+        font-family: "Roboto";
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin-right: 1%;
+        width: 65px;
+        height: 65px;
+    }
+    &__button {
+        outline: none;
+        background: white;
+        width: 65px;
+        height: 65px;
+        border: solid 1px;
+        &:focus {
+            border: solid 3px red;
+        }
+    }
+}
+    .color {
+        margin-top: 2.5%;
+        &__name {
+            font-size: 16px;
+            font-family: "Roboto";
+            color: rgb(0, 0, 0);
+            text-align: left;
+        }
+        &__item {
+            margin-top: 1.2%;
+            font-size: 36px;
+            font-family: "Roboto";
+            color: rgb(0, 0, 0);
+            text-align: center;
+            float: left;
+            margin-right: 1.5%;
+            width: 65px;
+            height: 65px;
+
+
+        }
+        &__button{
+            outline: none;
+            background: white;
+            width: 65px;
+            height: 65px;
+            border: solid 1px;
+            &:focus{
+                border: solid 3px red;
+            }
+            &_white{
+                background: #fffafb;
+            }
+            &_yellow{
+             background: #e3d95e;
+            }
+            &_green{
+                background: #a5af96;
+            }
+        }
+
+}
+.buy{
+    margin-top:3% ;
+    display: inline-block;
+    width: 100%;
 }
 /*
 .menu {

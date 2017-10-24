@@ -9,24 +9,63 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header class="header">
+<div class="wrapper">
+<div class="header">
     <img class="header__logo" src="img/the_shop_logo.svg">
     <img class="header__logo-oggetto" src="img/oggetto_logo.svg">
     <p class="header__number">+7(812)2<span class="header__point">.</span>12<span class="header__point">.</span>85<span class="header__point">.</span>06</p>
-</header>
-<div class="product">
-    <div class="product__pics">
-        <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка">
-    </div>
-    <div class="product__info">
-        <h2 class="product__title">Футболка Alien technology</h2>
-        <p class="product__description">
-            Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.
-        </p>
-        <div class="product__price">1500 ₽</div>
-    </div>
 </div>
+    <div class="main">
+    <div class="navigation">
+        <ul class="navigation__menu">
+            <li class="navigation__item"><a class="navigation__link navigation__link_black " href="">LISP</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="">OCaml</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="">JavaScript</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="">Python</a></li>
+            <li class="navigation__item"><a class="navigation__link" href="">PHP</a></li>
+        </ul>
+        <form class="search-form">
+                <input class="search-form__input" type="search" name="q">
+                <input class="search-form__image" type="image" src="img/search.svg">
+        </form>
+    </div>
+        <div class="choice">
+            <ul class="choice__menu">
+                <li class="choice__item"><a class="choice__link" href="">LISP</a></li>
+                <li class="choice__item ">/</li>
+                <li class="choice__item"><a class="choice__link" href="">Одежда</a></li>
+                <li class="choice__item">/</li>
+                <li class="choice__item"><a class="choice__link choice__link_black " href="">Футболки</a></li>
+            </ul>
 
+    </div>
+        <div class="product">
+            <div class="product__pics">
+                <img class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка">
+            </div>
+            <div class="product__info">
+                <h2 class="product__title">Футболка Alien technology</h2>
+                <p class="product__description">
+                    Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.
+                </p>
+                <div class="product__price">1500 ₽</div>
+                <div class="size">
+                    <p class="size__name">размер :</p>
+                    <div class="size__item"><input class="size__button" type="button" value="S"></div>
+                    <div class="size__item"><input class="size__button" type="button" value="M"></div>
+                    <div class="size__item"><input class="size__button" type="button" value="L"></div>
+                </div>
+                <div class="color">
+                    <p class="color__name">цвет :</p>
+                    <div class="color__item"><input class="color__button color__button_white" type="button" value=""></div>
+                    <div class="color__item"><input class="color__button color__button_yellow" type="button" value=""></div>
+                    <div class="color__item"><input class="color__button color__button_green" type="button" value=""></div>
+                </div>
+                <div class="buy"><input  type="button" value="КУПИТЬ"></div>
+            </div>
+        </div>
+    </div>
+    </div>
 <script src="js/scripts.js"></script>
 </body>
 </html>
