@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>the_shop</title>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
@@ -17,13 +18,14 @@
 </div>
     <div class="main">
     <div class="navigation">
-        <ul class="navigation__menu">
-            <li class="navigation__item"><a class="navigation__link navigation__link_black " href="">LISP</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="">OCaml</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="">JavaScript</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="">Python</a></li>
-            <li class="navigation__item"><a class="navigation__link" href="">PHP</a></li>
-        </ul>
+            <ul class="navigation__menu">
+                <% const menu = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP'] %>
+                <% menu.forEach(function(item) { %>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
         <form class="search-form">
                 <input class="search-form__input" type="search" name="q">
                 <input class="search-form__image" type="image" src="img/search.svg">
@@ -31,13 +33,13 @@
     </div>
         <div class="choice">
             <ul class="choice__menu">
-                <li class="choice__item"><a class="choice__link" href="">LISP</a></li>
-                <li class="choice__item ">/</li>
-                <li class="choice__item"><a class="choice__link" href="">Одежда</a></li>
-                <li class="choice__item">/</li>
-                <li class="choice__item"><a class="choice__link choice__link_black " href="">Футболки</a></li>
+                <% const choice = ['LISP', 'Одежда', 'Футболки'] %>
+                <% choice.forEach(function(item) { %>
+                <li class="choice__item">
+                    <a href="#" class="choice__link"><%= item %></a>
+                </li>
+                <% }); %>
             </ul>
-
     </div>
         <div class="product">
             <div class="product__pics">
