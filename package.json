@@ -21,11 +21,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
     "husky": "^0.14.3",
-    "stylelint": "^7.13.0"
+    "stylelint": "^7.13.0",
+    "gulp-sourcemaps": "^2.6.1"
   },
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-less": "^3.3.0",
+    "gulp-less": "^3.3.2",
     "install": "^0.10.1",
     "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
