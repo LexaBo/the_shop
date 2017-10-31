@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>the_shop</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+<div class="header">
+    <img class="header__logo" src="img/the_shop_logo.svg" alt="">
+    <img class="header__logo-oggetto" src="img/oggetto_logo.svg" alt="">
+    <p class="header__number">+7(812)2<span class="header__point">.</span>12<span class="header__point">.</span>85<span class="header__point">.</span>06</p>
+</div>
+    <div class="main">
+    <div class="navigation">
+            <ul class="navigation__menu">
+                <% const menu = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP'] %>
+                <% menu.forEach(function(item) { %>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+        <form class="search-form">
+                <input class="search-form__input" type="search" name="q">
+                <input class="search-form__image" type="image" src="img/search.svg" alt="поиск">
+        </form>
+    </div>
+        <div class="choice">
+            <ul class="choice__menu">
+                <% const choice = ['LISP', 'Одежда', 'Футболки'] %>
+                <% choice.forEach(function(item) { %>
+                <li class="choice__item">
+                    <a href="#" class="choice__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+    </div>
+        <div class="product">
+            <div class="product__pics">
+                <img id="big" class="product__pic" src="img/tshirt_white.jpg" alt="Белая футболка">
+            </div>
+            <div class="product__info">
+                <h2 class="product__title">Футболка Alien technology</h2>
+                <p class="product__description">
+                    Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.
+                </p>
+                <div class="product__price">1500 ₽</div>
+                <div class="size">
+                    <p class="size__name">размер :</p>
+                    <div class="size__item"><input class="size__button" type="button" value="S"></div>
+                    <div class="size__item"><input class="size__button" type="button" value="M"></div>
+                    <div class="size__item"><input class="size__button" type="button" value="L"></div>
+                </div>
+                <div class="color">
+                    <p class="color__name">цвет :</p>
+                    <div class="color__item"><button class="color__button color__button_white"  value="white"></button></div>
+                    <div class="color__item"><button class="color__button color__button_yellow" value="yellow"></button></div>
+                    <div class="color__item"><button class="color__button color__button_green"  value="green"></button></div>
+                </div>
+                <div class="product__buy"><input class="product__button" type="button" value="Купить"></div>
+                <div class="product__after"><a href="#" class="product__link"><div class="product__heart"><img  class="product__img" src="img/icon_heart.jpg" alt=""></div><div class="product__text">Отложить на потом</div></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="support">
+            <p class="support__title">Сервис и Поддержка</p>
+            <ul class="support__list">
+                <% const list3 = ['Как сделать заказ', 'Возврат товара', 'Публичная сфера ', 'Доставка'] %>
+                <% list3.forEach(function(item) { %>
+                <li class="support__item">
+                    <a href="#" class="support__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+
+            <ul class="support__list2">
+                <% const list4 = ['Способы оплаты', 'Правила продажи', 'Возврат денежных средств', 'Вопросы и ответы'] %>
+                <% list4.forEach(function(item) { %>
+                <li class="support__item">
+                    <a href="#" class="support__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="About">
+            <p class="About__title">О компании</p>
+            <ul class="About__list">
+                <% const list5 = ['О нас', 'Контакты', 'Вакансии', 'Партнерам'] %>
+                <% list5.forEach(function(item) { %>
+                <li class="About__item">
+                    <a href="#" class="About__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+
+            <ul class="About__list2">
+                <% const list6 = ['Сертификаты', 'Преимущества', 'Наши скидки'] %>
+                <% list6.forEach(function(item) { %>
+                <li class="About__item">
+                    <a href="#" class="About__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="social">
+            <ul class="social__list3">
+                <% const list7 = ['бесплатная доставка от 4000', 'пробники в подарок при каждой покупке', 'акции и подарки за покупку'] %>
+                <% list7.forEach(function(item) { %>
+                <li class="social__item">
+                    <a href="#" class="social__link"><%= item %></a>
+                </li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="social1"><a href="#" class="social__link"><img  class="social__img" src="img/delivery.svg" alt=""></a></div>
+        <div class="social2"><a href="#" class="social__link"><img  class="social__img" src="img/heart.svg" alt=""></a></div>
+        <div class="social3"><a href="#" class="social__link"><img  class="social__img" src="img/price.svg" alt=""></a></div>
+        <div class="social4"><a href="#" class="social1__link"><img  class="social1__img" src="img/facebook.svg" alt=""></a></div>
+        <div class="social5"><a href="#" class="social2__link"><img  class="social2__img" src="img/twitter.svg" alt=""></a></div>
+        <div class="social6"><a href="#" class="social3__link"><img  class="social3__img" src="img/instagram.svg" alt=""></a></div>
+        <div class="shop">005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br>
+                Все права защищены. Доставка по всей России! </div>
+    </div>
+    </div>
+<script src="js/scripts.js"></script>
+</body>
+</html>
