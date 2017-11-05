@@ -21,306 +21,324 @@ body {
     width: 100%;
     height: 87px;
 
-    &__logo{
-        float: left;
-        width: 103px;
-        height: 22px;
-        margin-top: 35px;
-        margin-left: 6.3%;
-    }
-
-    &__logo-oggetto{
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: 19px;
-        left: 49%;
-    }
-
-    &__number{
-        float: right;
-        font-size: 24px;
-        font-family: Roboto, sans-serif;
-        color: rgb(204, 0, 0);
-        font-weight: bold;
-        margin-top: 35px;
-        margin-right: 6.3%;
-    }
-
     &__point{
         position: relative;
         top: -5px;
     }
 }
 
+.logo{
+    float: left;
+    width: 103px;
+    height: 22px;
+    margin-top: 35px;
+    margin-left: 6.3%;
+}
+
+.logo-oggetto{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 19px;
+    left: 49%;
+}
+
+.number{
+    float: right;
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+    color: rgb(204, 0, 0);
+    font-weight: bold;
+    margin-top: 35px;
+    margin-right: 6.3%;
+}
+
 .main {
     width: 100%;
     position: relative;
+}
 
-    .navigation {
-        position: relative;
-        background: #f2f2ed;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(217, 217, 212);
-        height: 53px;
+.navigation {
+    position: relative;
+    background: #f2f2ed;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 212);
+    height: 53px;
 
 
-        &__menu {
-            list-style: none;
-            margin-top: 1.4%;
-            margin-left: 6.3%;
-        }
+    &__menu {
+        list-style: none;
+        margin-top: 1.4%;
+        margin-left: 6.3%;
+    }
 
-        &__link {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(204, 0, 0);
-            text-decoration: underline;
-            text-align: left;
+    &__link {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(204, 0, 0);
+        text-decoration: underline;
+        text-align: left;
 
-            &:focus {
-                color: black;
-            }
-        }
-
-        &__item {
-            float: left;
-            margin-right: 1%;
+        &:focus {
+            color: black;
         }
     }
 
-    .search-form {
+    &__item {
+        float: left;
+        margin-right: 1%;
+    }
+}
+
+.search-form {
+    position: absolute;
+    right: 6.3%;
+    top: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(217, 217, 212);
+    background-color: rgb(255, 255, 255);
+    width: 253px;
+    height: 38px;
+
+    &__input {
         position: absolute;
-        right: 6.3%;
-        top: 7px;
-        border-style: solid;
-        border-width: 1px;
-        border-color: rgb(217, 217, 212);
-        background-color: rgb(255, 255, 255);
-        width: 253px;
-        height: 38px;
+        border: none;
+        outline: none;
+        width: 213px;
+        height: 36px;
+        left: 9px;
+        top: 1px;
+    }
 
-        &__input {
-            position: absolute;
-            border: none;
-            outline: none;
-            width: 213px;
-            height: 36px;
-            left: 9px;
-            top: 1px;
-        }
+    &__image {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        right: 9px;
+        top: 11px;
+        border: none;
+    }
+}
 
-        &__image {
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            right: 9px;
-            top: 11px;
-            border: none;
+.breadcrumbs {
+    padding: 50px 0 1.4% 6.3%;
+
+    &__menu {
+        list-style: none;
+        margin-bottom: 1.4%;
+        background: red;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(204, 0, 0);
+        text-decoration: underline;
+        text-align: left;
+
+        &:focus {
+            color: black;
         }
     }
 
-    .choice {
-        padding: 50px 0 1.4% 6.3%;
+    &__item {
+        float: left;
 
-        &__menu {
-            list-style: none;
-            margin-bottom: 1.4%;
-            background: red;
+        &::after {
+            content: '/';
         }
 
-        &__link {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(204, 0, 0);
-            text-decoration: underline;
-            text-align: left;
-
-            &:focus {
-                color: black;
-            }
-        }
-
-        &__item {
-            float: left;
-
+        &:last-child {
             &::after {
-                content: '/';
-            }
-
-            &:last-child {
-                &::after {
-                    content: '';
-                }
-            }
-        }
-    }
-
-    .product {
-        &__pics {
-            float: left;
-            margin-right: 4%;
-            width: 43.7%;
-            height: 43.7%;
-            margin-left: 6.3%;
-        }
-
-        &__pic {
-            width: 100%;
-        }
-
-        &__info {
-            float: right;
-            width: 39.7%;
-            margin-right: 6.3%;
-        }
-
-        &__title {
-            font-size: 36px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            text-align: left;
-        }
-
-        &__description {
-            margin-top: 1%;
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-        }
-
-        &__price {
-            margin-top: 2%;
-            font-size: 36px;
-            font-family: Roboto, sans-serif;
-            color: rgb(204, 0, 0);
-            font-weight: bold;
-            text-align: left;
-        }
-
-        &__buy {
-            margin-top: 3%;
-            display: inline-block;
-            width: 100%;
-        }
-
-        &__button {
-            background-color: #c00;
-            outline: none;
-            border: none;
-            height: 80px;
-            width: 202px;
-            margin-top: 3%;
-            color: white;
-            font-size: 24px;
-            font-family: Roboto, sans-serif;
-        }
-
-        &__link {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(153, 153, 153);
-            text-decoration: underline;
-            text-align: left;
-        }
-
-        &__heart {
-            float: left;
-            padding-top: 40px;
-            margin-right: 7px;
-        }
-
-        &__text {
-            padding-top: 45px;
-        }
-    }
-
-    .size {
-        width: 100%;
-        margin-top: 2.3%;
-
-        &__name {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-        }
-
-        &__item {
-            display: inline-block;
-            margin-top: 1.2%;
-            font-size: 36px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            margin-right: 1%;
-            width: 65px;
-            height: 65px;
-        }
-
-        &__button {
-            outline: none;
-            background: white;
-            width: 65px;
-            height: 65px;
-            border: solid 1px;
-
-            &:focus {
-                border: solid 3px red;
-            }
-        }
-    }
-
-    .color {
-        margin-top: 2.5%;
-
-        &__name {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-        }
-
-        &__item {
-            margin-top: 1.2%;
-            font-size: 36px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            float: left;
-            margin-right: 1.5%;
-            width: 65px;
-            height: 65px;
-        }
-
-        &__button {
-            outline: none;
-            background: white;
-            width: 65px;
-            height: 65px;
-            border: solid 1px;
-
-            &:focus {
-                border: solid 3px red;
-            }
-
-            &_white {
-                background: #fffafb;
-            }
-
-            &_yellow {
-                background: #e3d95e;
-            }
-
-            &_green {
-                background: #a5af96;
+                content: '';
             }
         }
     }
 }
+
+.product {
+    &__pics {
+        float: left;
+        margin-right: 4%;
+        width: 43.7%;
+        height: 43.7%;
+        margin-left: 6.3%;
+    }
+
+    &__pic {
+        width: 100%;
+    }
+
+    &__info {
+        float: right;
+        width: 39.7%;
+        margin-right: 6.3%;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        text-align: left;
+    }
+
+    &__description {
+        margin-top: 1%;
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+
+    &__price {
+        margin-top: 2%;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        color: rgb(204, 0, 0);
+        font-weight: bold;
+        text-align: left;
+    }
+
+    &__buy {
+        margin-top: 3%;
+        display: inline-block;
+        width: 100%;
+    }
+
+    &__button {
+        background-color: #c00;
+        outline: none;
+        border: none;
+        height: 80px;
+        width: 202px;
+        margin-top: 3%;
+        color: white;
+        font-size: 24px;
+        font-family: Roboto, sans-serif;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(153, 153, 153);
+        text-decoration: underline;
+        text-align: left;
+    }
+
+    &__heart {
+        float: left;
+        padding-top: 40px;
+        margin-right: 7px;
+    }
+
+    &__text {
+        padding-top: 45px;
+    }
+}
+
+.size {
+    width: 100%;
+    margin-top: 2.5%;
+
+    &__name {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-top: 1.2%;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin-right: 1.5%;
+        width: 65px;
+        height: 65px;
+        box-sizing: border-box;
+    }
+
+    &__radio{
+        display: none;
+
+        &:checked + .size__button{
+            border: solid 3px red;
+        }
+    }
+
+    &__button {
+        display: block;
+        outline: none;
+        background: white;
+        width: 65px;
+        height: 65px;
+        border: solid 1px;
+        text-align: center;
+        line-height: 63px;
+        box-sizing: border-box;
+    }
+}
+
+.color {
+    width: 100%;
+    margin-top: 2.5%;
+
+    &__name {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+    }
+
+    &__item {
+        margin-top: 1.2%;
+        font-size: 36px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        display: inline-block;
+        margin-right: 1.5%;
+        width: 65px;
+        height: 65px;
+        box-sizing: border-box;
+    }
+
+    &__radio{
+        display: none;
+
+        &:checked + .color__button{
+            border: solid 3px red;
+        }
+    }
+
+    &__button {
+        display: block;
+        outline: none;
+        background: white;
+        width: 65px;
+        height: 65px;
+        border: solid 1px;
+        box-sizing: border-box;
+
+        &_white {
+            background: #fffafb;
+        }
+
+        &_yellow {
+            background: #e3d95e;
+        }
+
+        &_green {
+            background: #a5af96;
+        }
+    }
+}
+
 
 .footer {
     margin-top: 8%;
@@ -330,194 +348,195 @@ body {
     display: inline-block;
     background: #f2f2ed;
     width: 100%;
+}
 
-    .support {
-        &__title {
-            position: absolute;
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 24px;
-            left: 6.3%;
-            top: 61px;
-        }
-
-        &__list {
-            position: absolute;
-            top: 102px;
-            left: 6.3%;
-            font-size: 14px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-            list-style: none;
-            margin-right: 55px;
-        }
-
-        &__link {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            text-align: left;
-        }
-
-        &__item {
-            margin-bottom: 11px;
-            display: block;
-        }
-
-        &__list2 {
-            position: absolute;
-            left: 17.3%;
-            top: 102px;
-            font-size: 14px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-            list-style: none;
-            margin-right: 55px;
-        }
-    }
-
-    .About {
-        &__title {
-            position: absolute;
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            text-align: left;
-            margin-bottom: 24px;
-            left: 33.3%;
-            top: 61px;
-        }
-
-        &__list {
-            position: absolute;
-            top: 102px;
-            left: 33.3%;
-            font-size: 14px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-            list-style: none;
-        }
-
-        &__link {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            text-align: left;
-        }
-
-        &__item {
-            margin-bottom: 11px;
-            display: block;
-        }
-
-        &__list2 {
-            position: absolute;
-            left: 44.2%;
-            top: 102px;
-            font-size: 14px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-            list-style: none;
-        }
-    }
-
-    .social {
+.support {
+    &__title {
         position: absolute;
-        right: 18.2%;
-        top: 70px;
-        width: 272px;
-        white-space: nowrap;
-
-        &__list3 {
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-align: left;
-            list-style: none;
-        }
-
-        &__link {
-            font-size: 16px;
-            font-family: Roboto, sans-serif;
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            text-align: left;
-        }
-
-        &__item {
-            margin-bottom: 35px;
-            display: block;
-        }
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 24px;
+        left: 6.3%;
+        top: 61px;
     }
 
-    .social1{
+    &__column1 {
         position: absolute;
-        top: 64px;
-        right: 575px;
-        width: 50px;
-        height: 25px;
-    }
-
-    .social2{
-        position: absolute;
-        width: 30px;
-        height: 25px;
-        right: 575px;
-        top: 115px;
-    }
-
-    .social3{
-        position: absolute;
-        width: 30px;
-        height: 25px;
-        right: 575px;
-        top: 170px;
-    }
-
-    .social4{
-        position: absolute;
-        top: 64px;
-        right: 6.8%;
-        width: 16px;
-        height: 30px;
-    }
-
-    .social5{
-        position: absolute;
-        width: 30px;
-        height: 25px;
-        right: 6.3%;
-        top: 115px;
-    }
-
-    .social6{
-        position: absolute;
-        width: 30px;
-        height: 25px;
-        right: 6.3%;
-        top: 170px;
-    }
-
-    .shop{
-        border-top: 1px solid #d9d9d4;
-        position: absolute;
-        top: 252px;
-        padding-top: 34px;
-        margin-left: 6.3%;
-        margin-right: 6.3%;
-        width: 87.5%;
+        top: 102px;
+        left: 6.3%;
         font-size: 14px;
         font-family: Roboto, sans-serif;
         color: rgb(0, 0, 0);
+        text-align: left;
+        list-style: none;
+        margin-right: 55px;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-align: left;
+    }
+
+    &__item {
+        margin-bottom: 11px;
+        display: block;
+    }
+
+    &__column2 {
+        position: absolute;
+        left: 17.3%;
+        top: 102px;
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        list-style: none;
+        margin-right: 55px;
     }
 }
+
+.about {
+    &__title {
+        position: absolute;
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 24px;
+        left: 33.3%;
+        top: 61px;
+    }
+
+    &__column1 {
+        position: absolute;
+        top: 102px;
+        left: 33.3%;
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        list-style: none;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-align: left;
+    }
+
+    &__item {
+        margin-bottom: 11px;
+        display: block;
+    }
+
+    &__column2 {
+        position: absolute;
+        left: 44.2%;
+        top: 102px;
+        font-size: 14px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        list-style: none;
+    }
+}
+
+.social {
+    position: absolute;
+    right: 18.2%;
+    top: 70px;
+    width: 272px;
+    white-space: nowrap;
+
+    &__column1 {
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-align: left;
+        list-style: none;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-family: Roboto, sans-serif;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        text-align: left;
+    }
+
+    &__item {
+        margin-bottom: 35px;
+        display: block;
+    }
+}
+
+.social1{
+    position: absolute;
+    top: 64px;
+    right: 575px;
+    width: 50px;
+    height: 25px;
+}
+
+.social2{
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    right: 575px;
+    top: 115px;
+}
+
+.social3{
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    right: 575px;
+    top: 170px;
+}
+
+.social4{
+    position: absolute;
+    top: 64px;
+    right: 6.8%;
+    width: 16px;
+    height: 30px;
+}
+
+.social5{
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    right: 6.3%;
+    top: 115px;
+}
+
+.social6{
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    right: 6.3%;
+    top: 170px;
+}
+
+.shop{
+    border-top: 1px solid #d9d9d4;
+    position: absolute;
+    top: 252px;
+    padding-top: 34px;
+    margin-left: 6.3%;
+    margin-right: 6.3%;
+    width: 87.5%;
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
 
