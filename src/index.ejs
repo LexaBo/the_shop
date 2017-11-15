@@ -10,27 +10,30 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-<div class="wrapper">
-<div class="header">
+<header class="header">
+    <div class="container_header">
     <img class="logo" src="img/the_shop_logo.svg" alt="">
     <img class="logo-oggetto" src="img/oggetto_logo.svg" alt="">
     <p class="number">+7(812)2<span class="header__point">.</span>12<span class="header__point">.</span>85<span class="header__point">.</span>06</p>
-</div>
-    <div class="main">
-    <div class="navigation">
-            <ul class="navigation__menu">
-                <% const menu = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP'] %>
-                <% menu.forEach(function(item) { %>
-                <li class="navigation__item">
-                    <a href="#" class="navigation__link"><%= item %></a>
-                </li>
-                <% }); %>
-            </ul>
-        <form class="search-form">
-                <input class="search-form__input" type="search" name="q">
-                <input class="search-form__image" type="image" src="img/search.svg" alt="поиск">
-        </form>
     </div>
+</header>
+    <nav class="navigation">
+        <div class="container_navigation">
+        <ul class="navigation__menu">
+            <% const menu = ['LISP', 'OCaml', 'JavaScript', 'Python', 'PHP'] %>
+            <% menu.forEach(function(item) { %>
+            <li class="navigation__item">
+                <a href="#" class="navigation__link"><%= item %></a>
+            </li>
+            <% }); %>
+        </ul>
+        <form class="search-form">
+            <input class="search-form__input" type="search" name="q">
+            <input class="search-form__image" type="image" src="img/search.svg" alt="поиск">
+        </form>
+        </div>
+    </nav>
+    <main class="main">
         <div class="breadcrumbs">
             <ul class="breadcrumbs__menu">
                 <% const breadcrumbs = ['LISP', 'Одежда', 'Футболки'] %>
@@ -50,27 +53,29 @@
                 <p class="product__description">
                     Состав: 100% хлопок, динамическая типизация, польская нотация. Производство: Россия.
                 </p>
-                <form class="form">
-                <div class="product__price">1500 ₽</div>
-                <div class="size">
+                <form id="doc" class="form">
+                <div  id="priceVal" class="product__price">1500 ₽</div>
+                <div id="sizeList" class="size">
                     <p class="size__name">размер :</p>
-                    <div class="size__item"><input  class="size__radio" type="radio" name="size" id="size1" ><label for="size1" class="size__button">S</label></div>
-                    <div class="size__item"><input  checked class="size__radio" type="radio" name="size" id="size2" ><label for="size2" class="size__button">M</label></div>
-                    <div class="size__item"><input  class="size__radio" type="radio" name="size" id="size3" ><label for="size3" class="size__button">L</label></div>
+                    <div class="size__item" ><input data-type="size" data-value="s" class="size__radio" type="radio" name="size" id="size1" ><label  for="size1" class="size__button">S</label></div>
+                    <div class="size__item" ><input data-type="size" data-value="m" checked class="size__radio" type="radio" name="size" id="size2" ><label  for="size2" class="size__button">M</label></div>
+                    <div class="size__item" ><input data-type="size" data-value="l" class="size__radio" type="radio" name="size" id="size3" ><label  for="size3" class="size__button">L</label></div>
                 </div>
-                <div class="color">
+                <div  id="colorList" class="color">
                     <p class="color__name">цвет :</p>
-                    <div class="color__item"><input checked class="color__radio" type="radio" name="color" id="color1" ><label for="color1" class="color__button color__button_white"></label></div>
-                    <div class="color__item"><input  class="color__radio" type="radio" name="color" id="color2" ><label for="color2" class="color__button color__button_yellow"></label></div>
-                    <div class="color__item"><input  class="color__radio" type="radio" name="color" id="color3" ><label for="color3" class="color__button color__button_green"></label></div>
+                    <div class="color__item"><input data-type="color" data-value="white" checked class="color__radio" type="radio" name="color" id="color1" ><label data-type="color" data-value="white" for="color1" class="color__button color__button_white"></label></div>
+                    <div class="color__item"><input data-type="color" data-value="yellow" class="color__radio" type="radio" name="color" id="color2" ><label data-type="color" data-value="yellow" for="color2" class="color__button color__button_yellow"></label></div>
+                    <div class="color__item"><input data-type="color" data-value="green" class="color__radio" type="radio" name="color" id="color3" ><label data-type="color" data-value="green" for="color3" class="color__button color__button_green"></label></div>
                 </div>
                 <div class="product__buy"><input class="product__button" type="button" value="Купить"></div>
                 <div class="product__after"><a href="#" class="product__link"><div class="product__heart"><img  class="product__img" src="img/icon_heart.jpg" alt=""></div><div class="product__text">Отложить на потом</div></a></div>
                 </form>
             </div>
         </div>
-    </div>
-    <div class="footer">
+    </main>
+    <footer class="footer">
+        <div class="container_footer">
+            <div class="flex">
         <div class="support">
             <p class="support__title">Сервис и Поддержка</p>
             <ul class="support__column1">
@@ -113,7 +118,7 @@
         </div>
         <div class="social">
             <ul class="social__column1">
-                <% const advantagesList = ['бесплатная доставка от 4000', 'пробники в подарок при каждой покупке', 'акции и подарки за покупку'] %>
+                <% const advantagesList = ['бесплатная доставка от 4000₽', 'пробники в подарок при каждой покупке', 'акции и подарки за покупку'] %>
                 <% advantagesList.forEach(function(item) { %>
                 <li class="social__item">
                     <a href="#" class="social__link"><%= item %></a>
@@ -124,13 +129,16 @@
         <div class="social1"><a href="#" class="social__link"><img  class="social__img" src="img/delivery.svg" alt=""></a></div>
         <div class="social2"><a href="#" class="social__link"><img  class="social__img" src="img/heart.svg" alt=""></a></div>
         <div class="social3"><a href="#" class="social__link"><img  class="social__img" src="img/price.svg" alt=""></a></div>
-        <div class="social4"><a href="#" class="social1__link"><img  class="social1__img" src="img/facebook.svg" alt=""></a></div>
-        <div class="social5"><a href="#" class="social2__link"><img  class="social2__img" src="img/twitter.svg" alt=""></a></div>
-        <div class="social6"><a href="#" class="social3__link"><img  class="social3__img" src="img/instagram.svg" alt=""></a></div>
+            <ul class="icon">
+                <li class="icon__list"><div class="social4"><a href="#" class="social1__link"><img  class="social1__img" src="img/facebook.svg" alt=""></a></div></li>
+                <li class="icon__list"><div class="social5"><a href="#" class="social2__link"><img  class="social2__img" src="img/twitter.svg" alt=""></a></div></li>
+                <li class="icon__list"><div class="social6"><a href="#" class="social3__link"><img  class="social3__img" src="img/instagram.svg" alt=""></a></div></li>
+            </ul>
+        </div>
         <div class="shop">005-2017 © 7h35h0p.ru — модный интернет-магазин одежды, обуви и аксессуаров.<br>
                 Все права защищены. Доставка по всей России! </div>
-    </div>
-    </div>
+            </div>
+    </footer>
 <script src="js/scripts.js"></script>
 </body>
 </html>
