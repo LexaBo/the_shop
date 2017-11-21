@@ -42,10 +42,12 @@ Dispatcher.addEventListener('property-selected', ev => {
 
     if (data.type === 'color') {
         changePicture(data.value);
+        localStorage.setItem(data.type, data.value);
     }
 
     if (data.type === 'size') {
         changePrice();
+        localStorage.setItem(data.type, data.value);
     }
 });
 
@@ -56,4 +58,22 @@ function changePrice() {
 function changePicture(color) {
     document.getElementById('big').src = 'img/tshirt_' + color + '.jpg';
 }
+
+
+if(localStorage.getItem('size')) {
+    const number = localStorage.getItem('size');
+    document.querySelector('input[data-type="size"][data-value="' + number + '"]').setAttribute('checked','checked');
+}
+
+if(localStorage.getItem('color')) {
+    const number = localStorage.getItem('color');
+    document.querySelector('input[data-type="color"][data-value="'+number+'"]').setAttribute('checked','checked');
+}
+
+
+
+
+
+
+
 
