@@ -62,14 +62,16 @@ function changePicture(color) {
 
 if(localStorage.getItem('size')) {
     const number = localStorage.getItem('size');
-    document.querySelector('input[data-type="size"][data-value="' + number + '"]').setAttribute('checked','checked');
+    document.querySelector('input[data-type="size"][data-value="' + number + '"]').setAttribute('checked', 'checked');
+    changePrice();
 }
+
 
 if(localStorage.getItem('color')) {
     const number = localStorage.getItem('color');
     document.querySelector('input[data-type="color"][data-value="'+number+'"]').setAttribute('checked','checked');
+    changePicture(number);
 }
-
 
 
 
