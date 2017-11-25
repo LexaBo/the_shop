@@ -55,8 +55,8 @@ function changePrice() {
     document.getElementById('priceVal').innerHTML = +new Date();
 }
 
-function changePicture(color) {
-    document.getElementById('big').src = 'img/tshirt_' + color + '.jpg';
+function changePicture(co) {
+    document.getElementById('big').src = 'img/tshirt_' + co + '.jpg';
 }
 
 
@@ -71,6 +71,7 @@ if(localStorage.getItem('color')) {
     const number = localStorage.getItem('color');
     document.querySelector('input[data-type="color"][data-value="'+number+'"]').setAttribute('checked','checked');
     changePicture(number);
+    // document.getElementById('big').src = 'img/tshirt_' + number + '.jpg';
 }
 
 
